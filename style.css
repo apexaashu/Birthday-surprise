@@ -1,0 +1,4016 @@
+/*=========================================
+        OPERATION PUCHKU ULTIMATE
+            STYLE.CSS STEP 1
+=========================================*/
+
+/*============ GOOGLE VARIABLES ============*/
+
+:root{
+
+--primary:#ff4f8b;
+--secondary:#ff85b5;
+--accent:#ffd8e8;
+--background:#fff8fc;
+--white:#ffffff;
+--text:#444444;
+--heading:#222222;
+--shadow:0 15px 35px rgba(0,0,0,.12);
+--radius:24px;
+--transition:.35s ease;
+
+}
+
+/*============ RESET ============*/
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#fff8fc,#ffeef5);
+color:var(--text);
+overflow-x:hidden;
+
+}
+
+/*============ SCROLLBAR ============*/
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+border-radius:20px;
+
+}
+
+/*============ COMMON ============*/
+
+section{
+
+padding:100px 8%;
+
+}
+
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+button{
+
+border:none;
+outline:none;
+cursor:pointer;
+font-family:inherit;
+transition:var(--transition);
+
+}
+
+.sectionTitle{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.sectionTitle h2{
+
+font-size:2.3rem;
+color:var(--primary);
+margin-bottom:15px;
+
+}
+
+.sectionTitle p{
+
+max-width:700px;
+margin:auto;
+line-height:1.8;
+
+}
+
+/*============ LOADER ============*/
+
+#loader{
+
+position:fixed;
+inset:0;
+background:linear-gradient(135deg,#ffd8e8,#fff8fc);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+transition:.8s;
+
+}
+
+.loaderBox{
+
+text-align:center;
+
+}
+
+.loaderHeart{
+
+font-size:60px;
+animation:heartbeat 1s infinite;
+
+}
+
+.loaderBox h2{
+
+margin:20px 0 10px;
+color:var(--primary);
+
+}
+
+.loaderBox p{
+
+color:#666;
+
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+}
+
+/*============ WELCOME ============*/
+
+#welcome{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+
+}
+
+.welcomeCard{
+
+max-width:650px;
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(15px);
+padding:45px;
+border-radius:30px;
+box-shadow:var(--shadow);
+text-align:center;
+
+}
+
+.welcomeCard h3{
+
+color:var(--primary);
+margin-bottom:20px;
+
+}
+
+.welcomeCard h1{
+
+font-size:3rem;
+font-family:'Great Vibes',cursive;
+color:var(--primary);
+
+}
+
+.welcomeCard h2{
+
+margin:20px 0;
+font-size:1.7rem;
+color:var(--heading);
+
+}
+
+.welcomeCard p{
+
+line-height:2;
+margin-bottom:35px;
+
+}
+
+#startButton{
+
+background:var(--primary);
+color:#fff;
+padding:16px 40px;
+border-radius:50px;
+font-size:1rem;
+
+}
+
+#startButton:hover{
+
+transform:translateY(-5px);
+background:#ff2e74;
+
+}
+
+/*============ MAIN CONTENT ============*/
+
+#mainContent{
+
+display:none;
+
+}
+
+/*============ HERO ============*/
+
+#hero{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+
+}
+
+.heroOverlay{
+
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.55));
+
+}
+
+.heroContent{
+
+position:relative;
+z-index:2;
+max-width:850px;
+
+}
+
+.heroContent h1{
+
+font-size:4rem;
+font-family:'Great Vibes',cursive;
+color:var(--primary);
+
+}
+
+.heroContent h2{
+
+margin:20px 0;
+font-size:2rem;
+
+}
+
+.heroContent p{
+
+line-height:2;
+margin:30px auto;
+max-width:700px;
+
+}
+
+.heroButtons{
+
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.heroButtons button{
+
+padding:15px 34px;
+border-radius:40px;
+background:var(--primary);
+color:#fff;
+font-size:1rem;
+
+}
+
+.heroButtons button:hover{
+
+transform:translateY(-5px);
+
+}
+
+/*============ RESPONSIVE ============*/
+
+@media(max-width:768px){
+
+section{
+
+padding:80px 6%;
+
+}
+
+.welcomeCard{
+
+padding:30px;
+
+}
+
+.welcomeCard h1{
+
+font-size:2.4rem;
+
+}
+
+.heroContent h1{
+
+font-size:3rem;
+
+}
+
+.heroContent h2{
+
+font-size:1.5rem;
+
+}
+
+.sectionTitle h2{
+
+font-size:2rem;
+
+}
+
+}
+/*=========================================
+      FIXED MUSIC PLAYER
+=========================================*/
+
+#musicPlayer{
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:12px 18px;
+
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border-radius:50px;
+    box-shadow:var(--shadow);
+
+    z-index:9999;
+
+    /* IMPORTANT: No movement */
+    animation:none !important;
+
+    /* Prevent accidental transform movement */
+    transform:none !important;
+}
+
+/* Music button itself */
+#musicToggle{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+    color:#fff;
+
+    font-size:22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    transform:none !important;
+}
+
+/* Don't move the player when hovering */
+#musicPlayer:hover{
+    transform:none !important;
+}
+
+/* Don't move music button on hover */
+#musicToggle:hover{
+    transform:none !important;
+}
+
+/* Remove movement */
+
+#musicPlayer:hover{
+
+transform:none;
+
+}
+
+#musicToggle:hover{
+
+transform:none;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    #musicPlayer{
+        position:fixed;
+        top:10px;
+        right:10px;
+
+        padding:10px;
+
+        animation:none !important;
+        transform:none !important;
+    }
+
+    #musicToggle{
+        transform:none !important;
+    }
+
+    #musicPlayer:hover,
+    #musicToggle:hover{
+        transform:none !important;
+    }
+
+    .musicInfo{
+        display:none;
+    }
+}
+
+/*=========================================
+        STORY SECTION
+=========================================*/
+
+#storyIntro{
+
+background:#fff;
+
+}
+
+.storyCard{
+
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:50px;
+border-radius:30px;
+box-shadow:var(--shadow);
+line-height:2;
+transition:.4s;
+
+}
+
+.storyCard:hover{
+
+transform:translateY(-8px);
+
+}
+
+.storyCard h3{
+
+color:var(--primary);
+margin-bottom:20px;
+font-size:2rem;
+
+}
+
+/*=========================================
+          TIMELINE
+=========================================*/
+
+.timelineContainer{
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+.timelineCard{
+
+background:#fff;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:var(--shadow);
+transition:.4s;
+
+}
+
+.timelineCard:hover{
+
+transform:translateY(-10px);
+
+}
+
+.timelineIcon{
+
+font-size:45px;
+margin-bottom:20px;
+
+}
+
+.timelineCard h3{
+
+color:var(--primary);
+margin-bottom:15px;
+
+}
+
+.timelineCard p{
+
+line-height:1.8;
+
+}
+
+/*=========================================
+        MEMORY GALLERY
+=========================================*/
+
+.galleryGrid{
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.memoryCard{
+
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.4s;
+
+}
+
+.memoryCard:hover{
+
+transform:translateY(-10px);
+
+}
+
+.memoryCard img{
+
+width:100%;
+height:330px;
+object-fit:cover;
+transition:.5s;
+
+}
+
+.memoryCard:hover img{
+
+transform:scale(1.08);
+
+}
+
+.memoryInfo{
+
+padding:25px;
+
+}
+
+.memoryInfo h3{
+
+color:var(--primary);
+margin-bottom:12px;
+
+}
+
+.memoryInfo p{
+
+line-height:1.8;
+
+}
+
+/*=========================================
+      PHOTO VIEWER
+=========================================*/
+
+#photoViewer{
+
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:99999;
+
+}
+
+#viewerImage{
+
+max-width:90%;
+max-height:85vh;
+border-radius:20px;
+
+}
+
+#closePhoto{
+
+position:absolute;
+top:25px;
+right:30px;
+font-size:35px;
+color:#fff;
+cursor:pointer;
+
+}
+
+/*=========================================
+      TRANSITION SECTION
+=========================================*/
+
+#transitionSection{
+
+padding:120px 8%;
+
+}
+
+.transitionCard{
+
+max-width:900px;
+margin:auto;
+text-align:center;
+background:#fff;
+padding:60px;
+border-radius:30px;
+box-shadow:var(--shadow);
+
+}
+
+.transitionCard h2{
+
+font-size:2.5rem;
+color:var(--primary);
+margin-bottom:20px;
+
+}
+
+.transitionCard p{
+
+line-height:2;
+margin-bottom:35px;
+
+}
+
+#nextSection{
+
+padding:16px 40px;
+border-radius:40px;
+background:var(--primary);
+color:#fff;
+font-size:1rem;
+
+}
+
+#nextSection:hover{
+
+transform:translateY(-5px);
+
+}
+
+/*=========================================
+        MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+#musicPlayer{
+
+right:10px;
+top:10px;
+padding:10px;
+
+}
+
+.musicInfo{
+
+display:none;
+
+}
+
+.storyCard,
+.transitionCard{
+
+padding:30px;
+
+}
+
+.memoryCard img{
+
+height:260px;
+
+}
+
+.timelineCard{
+
+padding:25px;
+
+}
+
+}
+/*=========================================
+          LOVE LETTER
+=========================================*/
+
+#loveLetter{
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff,
+        #fff6fb
+    );
+
+}
+
+.letterEnvelope{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+/* LETTER PAPER */
+
+.letterPaper{
+
+    background:#fffdf8;
+
+    border:2px dashed #ffc2da;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    line-height:2;
+
+    display:none;
+
+    text-align:left;
+
+    box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.10);
+
+}
+
+
+/* WHEN OPEN */
+
+.letterPaper{
+    display:none;
+}
+
+.letterPaper.show{
+    display:block;
+    animation:fadeLetter .8s ease;
+}
+
+
+/* TITLE */
+
+.letterPaper h3{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    font-family:
+    'Great Vibes',
+    cursive;
+
+}
+
+
+/* SIGNATURE */
+
+.letterPaper h4{
+
+    margin-top:30px;
+
+    color:var(--primary);
+
+    text-align:right;
+
+}
+
+
+/* BUTTON */
+
+#openLetter{
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4f8b,
+        #ff84b8
+    );
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:none;
+
+}
+
+
+/* HOVER */
+
+#openLetter:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+    box-shadow:
+    0 12px 25px
+    rgba(255,79,139,.35);
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeLetter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .letterPaper{
+
+        padding:25px;
+
+        font-size:.95rem;
+
+    }
+
+    .letterPaper h3{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+/*=========================================
+          MUSIC CARD
+=========================================*/
+
+#musicSection{
+
+padding:120px 8%;
+
+}
+
+.musicCard{
+
+max-width:700px;
+margin:auto;
+text-align:center;
+background:#fff;
+padding:50px;
+border-radius:30px;
+box-shadow:var(--shadow);
+
+}
+
+.musicIcon{
+
+font-size:70px;
+margin-bottom:20px;
+animation:musicFloat 2s infinite;
+
+}
+
+@keyframes musicFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+#playMusic{
+
+margin-top:30px;
+padding:15px 35px;
+background:var(--primary);
+color:#fff;
+border-radius:40px;
+
+}
+
+/*=========================================
+        SECRET ENVELOPE
+=========================================*/
+
+.secretCard{
+
+max-width:750px;
+margin:auto;
+text-align:center;
+background:#fff;
+padding:50px;
+border-radius:30px;
+box-shadow:var(--shadow);
+
+}
+
+.secretIcon{
+
+font-size:60px;
+margin-bottom:20px;
+
+}
+
+#openSecret{
+
+margin-top:25px;
+padding:15px 35px;
+background:var(--primary);
+color:#fff;
+border-radius:40px;
+
+}
+
+#secretMessage{
+
+display:none;
+margin-top:30px;
+padding:25px;
+background:#fff7fb;
+border-left:5px solid var(--primary);
+border-radius:20px;
+line-height:2;
+
+}
+
+/*=========================================
+          VIRTUAL ROSE
+=========================================*/
+
+#virtualRose{
+
+padding:120px 8%;
+
+}
+
+.roseCard{
+
+max-width:700px;
+margin:auto;
+text-align:center;
+background:#fff;
+padding:50px;
+border-radius:30px;
+box-shadow:var(--shadow);
+
+}
+
+.roseIcon{
+
+font-size:90px;
+animation:roseDance 2.5s infinite;
+
+}
+
+@keyframes roseDance{
+
+0%,100%{
+
+transform:rotate(-5deg);
+
+}
+
+50%{
+
+transform:rotate(5deg);
+
+}
+
+}
+
+#acceptRose{
+
+margin-top:30px;
+padding:15px 35px;
+background:var(--primary);
+color:#fff;
+border-radius:40px;
+
+}
+
+#roseMessage{
+
+display:none;
+margin-top:25px;
+font-size:1.2rem;
+color:var(--primary);
+font-weight:600;
+
+}
+
+/*=========================================
+          BUTTON EFFECT
+=========================================*/
+
+#openLetter,
+#playMusic,
+#openSecret,
+#acceptRose{
+
+transition:.35s;
+
+}
+
+#openLetter:hover,
+#playMusic:hover,
+#openSecret:hover,
+#acceptRose:hover{
+
+transform:translateY(-6px) scale(1.03);
+box-shadow:0 12px 25px rgba(255,79,139,.35);
+
+}
+
+/*=========================================
+          MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.letterPaper{
+
+padding:25px;
+
+}
+
+.musicCard,
+.secretCard,
+.roseCard{
+
+padding:30px;
+
+}
+
+.roseIcon{
+
+font-size:70px;
+
+}
+
+}
+
+/*=========================================
+          BIRTHDAY CAKE
+=========================================*/
+
+#birthdayCake{
+
+padding:120px 8%;
+
+}
+
+.cakeCard{
+
+max-width:700px;
+
+margin:auto;
+
+text-align:center;
+
+background:#fff;
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+}
+
+#cake{
+
+margin:auto;
+
+width:220px;
+
+position:relative;
+
+}
+
+.cakeBody{
+
+height:120px;
+
+background:#ffb6cf;
+
+border-radius:0 0 20px 20px;
+
+}
+
+.cakeTop{
+
+height:35px;
+
+background:#fff;
+
+border-radius:20px 20px 0 0;
+
+}
+
+.candle{
+
+width:12px;
+
+height:70px;
+
+background:#fff;
+
+position:absolute;
+
+left:50%;
+
+top:-65px;
+
+transform:translateX(-50%);
+
+border-radius:10px;
+
+}
+
+.flame{
+
+width:18px;
+
+height:28px;
+
+background:orange;
+
+border-radius:50%;
+
+position:absolute;
+
+left:50%;
+
+top:-22px;
+
+transform:translateX(-50%);
+
+animation:flicker .5s infinite;
+
+}
+
+@keyframes flicker{
+
+0%,100%{
+
+transform:translateX(-50%) scale(1);
+
+}
+
+50%{
+
+transform:translateX(-50%) scale(.85);
+
+}
+
+}
+
+.cakeButtons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin-top:35px;
+
+flex-wrap:wrap;
+
+}
+
+.cakeButtons button{
+
+padding:14px 30px;
+
+background:var(--primary);
+
+color:#fff;
+
+border-radius:35px;
+
+}
+
+/*=========================================
+          MEMORY JAR
+=========================================*/
+
+.jarCard{
+
+max-width:650px;
+
+margin:auto;
+
+padding:50px;
+
+text-align:center;
+
+background:#fff;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+}
+
+#memoryJarBtn{
+
+margin-top:25px;
+
+padding:15px 35px;
+
+background:var(--primary);
+
+color:#fff;
+
+border-radius:40px;
+
+}
+
+#memoryMessage{
+
+margin-top:30px;
+
+font-size:1.2rem;
+
+color:var(--primary);
+
+font-weight:600;
+
+min-height:40px;
+
+}
+
+/*=========================================
+          MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.popupCard{
+
+padding:25px;
+
+}
+
+.cakeCard,
+
+.jarCard{
+
+padding:30px;
+
+}
+
+.giftGrid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+/*=========================================
+            PROMISE BOOK
+=========================================*/
+
+#promiseBook{
+
+padding:120px 8%;
+
+background:linear-gradient(180deg,#fff,#fff7fb);
+
+}
+
+.bookCard{
+
+max-width:760px;
+
+margin:auto;
+
+background:#fff;
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+text-align:center;
+
+}
+
+.bookCard h2{
+
+color:var(--primary);
+
+margin-bottom:20px;
+
+}
+
+.bookCard p{
+
+line-height:1.9;
+
+}
+
+#bookPage{
+
+margin:35px 0;
+
+padding:35px;
+
+background:#fff9fc;
+
+border:2px dashed #ffd2e3;
+
+border-radius:20px;
+
+min-height:180px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:1.15rem;
+
+line-height:2;
+
+transition:.4s;
+
+}
+
+#nextPromise{
+
+padding:15px 35px;
+
+border-radius:40px;
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+/*=========================================
+          FINAL VIDEO
+=========================================*/
+
+#finalVideo{
+
+padding:120px 8%;
+
+}
+
+.videoBox{
+
+max-width:900px;
+
+margin:auto;
+
+background:#fff;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+text-align:center;
+
+}
+
+.videoBox h2{
+
+color:var(--primary);
+
+margin-bottom:15px;
+
+}
+
+.videoBox p{
+
+margin-bottom:30px;
+
+line-height:1.9;
+
+}
+
+#birthdayVideo{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/*=========================================
+          FINAL MESSAGE
+=========================================*/
+
+#finalMessage{
+
+padding:130px 8%;
+
+background:linear-gradient(180deg,#fff8fc,#ffeef7);
+
+}
+
+.finalCard{
+
+max-width:850px;
+
+margin:auto;
+
+padding:60px;
+
+background:#fff;
+
+border-radius:35px;
+
+box-shadow:var(--shadow);
+
+text-align:center;
+
+}
+
+.finalHeart{
+
+font-size:75px;
+
+animation:heartbeat 1.2s infinite;
+
+margin-bottom:20px;
+
+}
+
+.finalCard h2{
+
+font-size:2.5rem;
+
+color:var(--primary);
+
+margin-bottom:25px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+.finalCard p{
+
+line-height:2;
+
+margin-bottom:20px;
+
+}
+
+#finishJourney{
+
+margin-top:20px;
+
+padding:16px 40px;
+
+background:var(--primary);
+
+color:#fff;
+
+border-radius:40px;
+
+font-size:1rem;
+
+}
+
+/*=========================================
+            FOOTER
+=========================================*/
+
+footer{
+
+padding:50px 20px;
+
+text-align:center;
+
+background:#ff4f8b;
+
+color:#fff;
+
+}
+
+footer h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:2.4rem;
+
+margin-bottom:10px;
+
+}
+
+footer p{
+
+margin:8px 0;
+
+opacity:.95;
+
+}
+
+/*=========================================
+      FLOATING EFFECTS
+=========================================*/
+
+#floatingHearts,
+#floatingPetals,
+#twinkleStars{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:1;
+
+}
+
+.floatingHeart,
+.floatingPetal,
+.twinkleStar{
+
+position:absolute;
+
+animation:floatUp linear forwards;
+
+opacity:.8;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:translateY(100vh) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+/*=========================================
+        BUTTON HOVER
+=========================================*/
+
+#nextPromise:hover,
+#finishJourney:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 12px 25px rgba(255,79,139,.35);
+
+}
+
+/*=========================================
+        MOBILE RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+.bookCard,
+
+.videoBox,
+
+.finalCard{
+
+padding:30px;
+
+}
+
+.finalCard h2{
+
+font-size:2rem;
+
+}
+
+#bookPage{
+
+padding:20px;
+
+min-height:140px;
+
+font-size:1rem;
+
+}
+
+footer h2{
+
+font-size:2rem;
+
+}
+
+}
+/*=========================================
+        STEP 6 - FINAL POLISH
+=========================================*/
+
+/* Smooth Fade Animation */
+
+.fadeIn{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s ease;
+
+}
+
+.fadeIn.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* Beautiful Glass Effect */
+
+.glass{
+
+background:rgba(255,255,255,.22);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.35);
+
+}
+
+/* Premium Hover */
+
+.memoryCard,
+.timelineCard,
+.giftCard,
+.storyCard,
+.musicCard,
+.secretCard,
+.roseCard,
+.bookCard,
+.videoBox,
+.finalCard{
+
+transition:.45s ease;
+
+}
+
+.memoryCard:hover,
+.timelineCard:hover,
+.giftCard:hover,
+.storyCard:hover,
+.musicCard:hover,
+.secretCard:hover,
+.roseCard:hover,
+.bookCard:hover,
+.videoBox:hover,
+.finalCard:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+0 20px 45px rgba(255,79,139,.18);
+
+}
+
+/* Beautiful Gradient Button */
+
+button{
+
+background:
+
+linear-gradient(
+135deg,
+#ff4f8b,
+#ff84b8
+);
+
+color:white;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+}
+
+button:hover{
+
+transform:
+translateY(-5px)
+scale(1.03);
+
+}
+
+/*=========================================
+        MOBILE SAFE HERO
+=========================================*/
+
+#hero{
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+/* Mobile par unwanted zoom/scale feel prevent */
+
+@media(max-width:768px){
+
+#hero{
+
+background-size:cover;
+animation:none;
+
+}
+
+}
+
+/* Floating Hearts */
+
+.floatingHeart{
+
+position:absolute;
+
+font-size:22px;
+
+animation:
+
+heartFloat linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+
+translateY(100vh)
+
+rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Floating Petals */
+
+.floatingPetal{
+
+position:absolute;
+
+font-size:18px;
+
+animation:
+
+petalFloat linear forwards;
+
+}
+
+@keyframes petalFloat{
+
+0%{
+
+transform:
+
+translateY(100vh)
+
+translateX(0);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+translateX(120px);
+
+opacity:0;
+
+}
+
+}
+
+/* Twinkle Stars */
+
+.twinkleStar{
+
+position:absolute;
+
+width:4px;
+
+height:4px;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+
+twinkle 2s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.8);
+
+}
+
+}
+
+/* Gift Popup Scroll */
+
+.popupCard::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+.popupCard::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+/* Video */
+
+video{
+
+outline:none;
+
+}
+
+/* Better Selection */
+
+::selection{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+/* Soft Shadow */
+
+img{
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* Loader Hide Class */
+
+.loaderHide{
+
+opacity:0;
+
+visibility:hidden;
+
+pointer-events:none;
+
+}
+
+/* Utility */
+
+.hidden{
+
+display:none !important;
+
+}
+
+.show{
+
+display:block !important;
+
+}
+
+/* Smooth Transition */
+
+*{
+
+transition:
+
+background .3s,
+
+color .3s,
+
+border .3s,
+
+}
+
+/* Mobile Optimization */
+
+@media(max-width:768px){
+
+.heroContent h1{
+
+font-size:2.8rem;
+
+}
+
+.heroContent p{
+
+font-size:.95rem;
+
+}
+
+button{
+
+padding:14px 24px;
+
+font-size:.9rem;
+
+}
+
+.popupCard{
+
+width:95%;
+
+padding:22px;
+
+}
+
+#musicPlayer{
+
+transform:scale(.9);
+
+}
+
+}
+
+/*=========================================
+        STYLE.CSS COMPLETED ❤️
+=========================================*/
+/*=========================================
+      PREMIUM ROSE HEARTS
+=========================================*/
+
+.premiumRoseHeart{
+
+    position:fixed;
+
+    font-size:28px;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    opacity:0;
+
+    animation:
+        premiumRoseFloat
+        linear forwards;
+
+    filter:
+        drop-shadow(0 3px 8px rgba(255,79,139,.35));
+
+}
+
+@keyframes premiumRoseFloat{
+
+    0%{
+
+        transform:
+            translateY(0)
+            scale(.5)
+            rotate(-10deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    55%{
+
+        transform:
+            translateY(-45vh)
+            scale(1)
+            rotate(8deg);
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-85vh)
+            scale(.7)
+            rotate(-12deg);
+
+        opacity:0;
+
+    }
+
+}
+/*=========================================
+        🎁 GIFT LOCK SHAKE
+=========================================*/
+
+@keyframes giftShake{
+
+    0%,100%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-7px);
+    }
+
+    50%{
+        transform:translateX(7px);
+    }
+
+    75%{
+        transform:translateX(-4px);
+    }
+
+}
+/*=========================================
+      MOBILE STABILITY FIX
+=========================================*/
+
+html,
+body{
+
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+
+}
+
+/* Mobile par hover animations completely OFF */
+
+@media (max-width:768px){
+
+    button:hover,
+    .giftCard:hover,
+    .memoryCard:hover,
+    .timelineCard:hover,
+    .storyCard:hover,
+    .musicCard:hover,
+    .secretCard:hover,
+    .roseCard:hover,
+    .bookCard:hover,
+    .videoBox:hover,
+    .finalCard:hover{
+
+        transform:none !important;
+
+    }
+
+    /* Touch ke time unwanted scaling nahi */
+
+    button:active{
+
+        transform:scale(.98) !important;
+
+    }
+
+    /* Gift cards stable */
+
+    .giftCard{
+
+        transform:none;
+
+        transition:box-shadow .3s ease,
+                   opacity .3s ease;
+
+    }
+
+    /* Popup ke andar content stable */
+
+    #giftPopup{
+
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+
+    }
+
+    .popupCard{
+
+        width:92%;
+        max-width:700px;
+
+        transform:none !important;
+
+    }
+
+}
+/*=========================================
+      GIFT POPUP MOBILE STABILITY
+=========================================*/
+
+html,
+body{
+
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+
+}
+
+#giftPopup{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+}
+
+.popupCard{
+
+    box-sizing:border-box;
+
+    width:min(92%,700px);
+    max-width:700px;
+
+    max-height:80vh;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    transform:none;
+
+    will-change:auto;
+
+}
+
+#giftContent{
+
+    width:100%;
+    max-width:100%;
+
+    box-sizing:border-box;
+
+    overflow-wrap:anywhere;
+    word-break:normal;
+
+}
+
+#giftContent img,
+#giftContent video{
+
+    max-width:100%;
+    height:auto;
+
+}
+
+@media(max-width:768px){
+
+    #giftPopup{
+
+        padding:20px;
+
+    }
+
+    .popupCard{
+
+        width:100%;
+        max-width:100%;
+
+        max-height:82vh;
+
+        padding:25px;
+
+        animation:none !important;
+
+    }
+
+}
+/*=========================================
+        FIXED MUSIC PLAYER — STABLE
+=========================================*/
+
+#musicPlayer{
+    position:fixed !important;
+
+    top:12px !important;
+    right:12px !important;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 14px;
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-radius:50px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    z-index:9998;
+
+    /* IMPORTANT */
+    transform:none !important;
+    animation:none !important;
+
+    /* Prevent layout movement */
+    margin:0 !important;
+
+    /* Stable positioning */
+    width:max-content;
+    max-width:calc(100vw - 24px);
+
+    touch-action:manipulation;
+}
+
+#musicToggle{
+    width:52px;
+    height:52px;
+
+    min-width:52px;
+    min-height:52px;
+
+    padding:0;
+    margin:0;
+
+    border-radius:50%;
+
+    background:var(--primary);
+    color:#fff;
+
+    font-size:21px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    transform:none !important;
+    animation:none !important;
+
+    touch-action:manipulation;
+}
+
+/* NO movement on hover/touch */
+
+#musicPlayer:hover,
+#musicPlayer:active,
+#musicPlayer:focus{
+    transform:none !important;
+}
+
+#musicToggle:hover,
+#musicToggle:active,
+#musicToggle:focus{
+    transform:none !important;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    #musicPlayer{
+        top:10px !important;
+        right:10px !important;
+
+        padding:8px !important;
+
+        transform:none !important;
+        animation:none !important;
+
+        width:auto;
+    }
+
+    #musicToggle{
+        width:50px;
+        height:50px;
+
+        min-width:50px;
+        min-height:50px;
+
+        transform:none !important;
+    }
+
+    .musicInfo{
+        display:none !important;
+    }
+}
+/* MUSIC PLAYER - SIMPLE FIX */
+
+#musicPlayer {
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important;
+
+    left: auto !important;
+    bottom: auto !important;
+
+    z-index: 999999 !important;
+
+    width: 55px !important;
+    height: 55px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: block !important;
+
+    transform: none !important;
+    animation: none !important;
+}
+
+#musicPlayer .musicInfo {
+    display: none !important;
+}
+
+#musicToggle {
+    width: 55px !important;
+    height: 55px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    transform: none !important;
+    animation: none !important;
+}
+
+/*=========================================
+      FINAL MOBILE PHOTO + MUSIC FIX
+=========================================*/
+
+/* MUSIC PLAYER — COMPLETELY FIXED */
+
+#musicPlayer{
+    position:fixed !important;
+
+    top:12px !important;
+    right:12px !important;
+
+    left:auto !important;
+    bottom:auto !important;
+
+    transform:none !important;
+    animation:none !important;
+
+    margin:0 !important;
+
+    z-index:999999 !important;
+
+    transition:none !important;
+
+    will-change:auto !important;
+}
+
+
+/* MUSIC BUTTON */
+
+#musicToggle{
+    transform:none !important;
+    animation:none !important;
+
+    transition:
+        background .25s ease,
+        box-shadow .25s ease !important;
+
+    position:relative !important;
+
+    z-index:1000000 !important;
+}
+
+
+/* NO MOVEMENT */
+
+#musicPlayer:hover,
+#musicPlayer:active,
+#musicPlayer:focus,
+#musicToggle:hover,
+#musicToggle:active,
+#musicToggle:focus{
+
+    transform:none !important;
+
+}
+
+
+/*=========================================
+        PHOTO VIEWER — STABLE
+=========================================*/
+
+#photoViewer{
+
+    position:fixed !important;
+
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+
+    width:100vw !important;
+    height:100vh !important;
+
+    transform:none !important;
+
+    animation:none !important;
+
+    transition:
+        opacity .25s ease !important;
+
+    z-index:999998 !important;
+
+    overflow:hidden !important;
+
+}
+
+
+/* OPENED IMAGE — NO ZOOM */
+
+#viewerImage{
+
+    max-width:90vw !important;
+    max-height:80vh !important;
+
+    width:auto !important;
+    height:auto !important;
+
+    object-fit:contain !important;
+
+    transform:none !important;
+
+    animation:none !important;
+
+    transition:
+        opacity .25s ease !important;
+
+    will-change:auto !important;
+
+    box-shadow:none !important;
+}
+
+
+/* CLOSE BUTTON */
+
+#closePhoto{
+
+    transform:none !important;
+
+    animation:none !important;
+
+    transition:
+        background .25s ease,
+        color .25s ease !important;
+
+    z-index:1000000 !important;
+
+}
+
+
+/*=========================================
+      MEMORY IMAGES — NO MOBILE ZOOM
+=========================================*/
+
+.memoryCard img{
+
+    transform:none !important;
+
+    animation:none !important;
+
+    transition:
+        opacity .3s ease !important;
+
+    touch-action:manipulation;
+
+}
+
+
+/* Desktop hover zoom bhi completely OFF */
+
+.memoryCard:hover img{
+
+    transform:none !important;
+
+}
+
+
+/* Memory card itself bhi stable */
+
+.memoryCard:hover{
+
+    transform:none !important;
+
+}
+
+
+/*=========================================
+          MOBILE FINAL LOCK
+=========================================*/
+
+@media(max-width:768px){
+
+    #musicPlayer{
+
+        position:fixed !important;
+
+        top:10px !important;
+        right:10px !important;
+
+        transform:none !important;
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+    #musicToggle{
+
+        transform:none !important;
+
+        animation:none !important;
+
+    }
+
+    #photoViewer{
+
+        position:fixed !important;
+
+        transform:none !important;
+
+        animation:none !important;
+
+    }
+
+    #viewerImage{
+
+        transform:none !important;
+
+        animation:none !important;
+
+        max-width:88vw !important;
+        max-height:78vh !important;
+
+    }
+
+    .memoryCard{
+
+        transform:none !important;
+
+        transition:
+            box-shadow .25s ease,
+            opacity .25s ease !important;
+
+    }
+
+    .memoryCard:hover{
+
+        transform:none !important;
+
+    }
+
+    .memoryCard img{
+
+        transform:none !important;
+
+    }
+
+    .memoryCard:hover img{
+
+        transform:none !important;
+
+    }
+
+}
+/*=========================================
+      GIFT 5 — PREMIUM REASON DESIGN
+=========================================*/
+
+.premiumReasonGift{
+    text-align:center;
+    padding:10px 5px 20px;
+}
+
+.reasonHeart{
+    font-size:55px;
+    margin-bottom:10px;
+    animation:reasonHeartBeat 1.5s infinite;
+}
+
+@keyframes reasonHeartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+
+}
+
+.premiumReasonGift h2{
+
+    color:var(--primary);
+    font-family:'Great Vibes',cursive;
+    font-size:2.5rem;
+    margin-bottom:18px;
+
+}
+
+.reasonIntro{
+
+    line-height:1.9;
+    color:#555;
+}
+
+.reasonProgress{
+
+    margin:25px auto 15px;
+    font-size:.85rem;
+    color:var(--primary);
+    font-weight:600;
+}
+
+.premiumReasonText{
+
+    min-height:210px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fc,
+            #fff
+        );
+
+    border:2px dashed #ffc2da;
+
+    border-radius:22px;
+
+    line-height:1.9;
+
+    color:#444;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+
+}
+
+.reasonHint{
+
+    color:#999;
+    font-style:italic;
+
+}
+
+.premiumReasonBtn{
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    border-radius:40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f8b,
+            #ff84b8
+        );
+
+    color:#fff;
+
+    font-weight:600;
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,79,139,.25);
+
+}
+
+.premiumReasonBtn:disabled{
+
+    cursor:default;
+
+}
+
+.finalReason{
+
+    width:100%;
+
+}
+
+.finalReasonHeart{
+
+    font-size:45px;
+    margin-bottom:15px;
+
+}
+
+.finalReason strong{
+
+    color:var(--primary);
+    font-size:1.1rem;
+
+}
+
+.shaktiSignature{
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:1.8rem;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .premiumReasonGift h2{
+        font-size:2.1rem;
+    }
+
+    .premiumReasonText{
+        min-height:240px;
+        padding:25px 18px;
+        font-size:.95rem;
+    }
+
+    .premiumReasonBtn{
+        width:100%;
+        padding:14px 20px;
+    }
+
+}
+/* =========================================
+   🔒 MUSIC PLAYER — ABSOLUTELY FIXED
+   OPERATION PUCHKU FINAL LOCK
+========================================= */
+
+#musicPlayer{
+    position: fixed !important;
+
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 8px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(255,255,255,.95) !important;
+    border-radius: 50px !important;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.12) !important;
+
+    z-index: 2147483647 !important;
+
+    /* 🚫 ALL MOVEMENT OFF */
+    transform: translate3d(0,0,0) !important;
+    animation: none !important;
+    transition: none !important;
+
+    /* 🚫 NO SCALING */
+    scale: 1 !important;
+
+    /* 🚫 NO ACCIDENTAL LAYOUT EFFECT */
+    float: none !important;
+
+    /* 🚫 STAY ABOVE EVERYTHING */
+    isolation: isolate !important;
+
+    touch-action: none !important;
+}
+
+
+/* =========================================
+   🎵 MUSIC BUTTON
+========================================= */
+
+#musicToggle{
+    position: relative !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    min-width: 50px !important;
+    min-height: 50px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: var(--primary) !important;
+    color: #fff !important;
+
+    font-size: 21px !important;
+
+    /* 🚫 ABSOLUTELY NO MOVEMENT */
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+
+    scale: 1 !important;
+
+    touch-action: manipulation !important;
+}
+
+
+/* =========================================
+   🚫 KILL ALL STATES
+========================================= */
+
+#musicPlayer:hover,
+#musicPlayer:active,
+#musicPlayer:focus,
+#musicPlayer:focus-visible{
+
+    transform: translate3d(0,0,0) !important;
+    animation: none !important;
+    transition: none !important;
+    scale: 1 !important;
+
+}
+
+
+#musicToggle:hover,
+#musicToggle:active,
+#musicToggle:focus,
+#musicToggle:focus-visible{
+
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    scale: 1 !important;
+
+}
+
+
+/* =========================================
+   📱 MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    #musicPlayer{
+
+        top: 10px !important;
+        right: 10px !important;
+
+        left: auto !important;
+        bottom: auto !important;
+
+        padding: 7px !important;
+
+        transform: translate3d(0,0,0) !important;
+        animation: none !important;
+        transition: none !important;
+
+        scale: 1 !important;
+
+    }
+
+
+    #musicToggle{
+
+        width: 48px !important;
+        height: 48px !important;
+
+        min-width: 48px !important;
+        min-height: 48px !important;
+
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+
+        scale: 1 !important;
+
+    }
+
+
+    .musicInfo{
+
+        display: none !important;
+
+    }
+
+}
+
+
+/* =========================================
+   🔒 FINAL OVERRIDE
+========================================= */
+
+body #musicPlayer{
+
+    position: fixed !important;
+    transform: translate3d(0,0,0) !important;
+    animation: none !important;
+    transition: none !important;
+
+}
+/*=========================================
+      PREMIUM SECRET ENVELOPE
+=========================================*/
+
+#secretEnvelope{
+
+    padding:120px 8%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff7fb,
+            #ffffff
+        );
+
+}
+
+
+/* MAIN CARD */
+
+#secretEnvelope .secretCard{
+
+    max-width:760px;
+
+    margin:auto;
+
+    padding:55px 45px;
+
+    text-align:center;
+
+    background:
+        rgba(255,255,255,.96);
+
+    border-radius:30px;
+
+    border:
+        1px solid
+        rgba(255,194,218,.6);
+
+    box-shadow:
+        0 20px 55px
+        rgba(255,79,139,.16);
+
+}
+
+
+/* ENVELOPE */
+
+#secretEnvelope .secretIcon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* TITLE */
+
+#secretEnvelope .secretCard h2{
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+/* MESSAGE */
+
+#secretText{
+
+    min-height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    color:var(--text);
+
+    transition:
+
+        opacity .4s ease,
+
+        transform .4s ease;
+
+}
+
+
+/* BUTTON */
+
+#openSecret{
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff4f8b,
+            #ff84b8
+        );
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(255,79,139,.25);
+
+}
+
+
+/* FINAL MESSAGE */
+
+.secretFinal{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+}
+
+
+/* FINAL LINE */
+
+.secretChoice{
+
+    margin-top:20px;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+
+/* SIGNATURE */
+
+.secretSignature{
+
+    margin-top:30px;
+
+    width:100%;
+
+    text-align:right;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    #secretEnvelope{
+
+        padding:90px 6%;
+
+    }
+
+    #secretEnvelope .secretCard{
+
+        padding:40px 25px;
+
+    }
+
+    #secretEnvelope .secretIcon{
+
+        font-size:58px;
+
+    }
+
+    #secretText{
+
+        min-height:240px;
+
+        font-size:.98rem;
+
+    }
+
+    .secretFinal{
+
+        font-size:1rem;
+
+    }
+
+}
+/*=========================================
+      PREMIUM SECRET MESSAGE REVEAL
+=========================================*/
+
+#secretEnvelope{
+    padding:120px 8%;
+    background:
+        radial-gradient(
+            circle at top,
+            #fff0f7,
+            #fff8fc 55%,
+            #ffffff
+        );
+}
+
+#secretEnvelope .secretCard{
+    max-width:780px;
+    margin:auto;
+    padding:55px 45px;
+    text-align:center;
+
+    background:rgba(255,255,255,.92);
+
+    border-radius:32px;
+
+    box-shadow:
+        0 20px 50px rgba(255,79,139,.14);
+
+    border:1px solid rgba(255,79,139,.12);
+}
+
+#secretEnvelope .secretIcon{
+    font-size:65px;
+    margin-bottom:18px;
+}
+
+#secretEnvelope .secretCard > h2{
+    color:var(--primary);
+    font-size:2.2rem;
+    margin-bottom:18px;
+}
+
+#secretEnvelope .secretCard > p{
+    line-height:2;
+}
+
+
+/*=========================================
+        SECRET MESSAGE — HIDDEN
+=========================================*/
+
+#secretMessage{
+
+    display:none;
+
+    margin-top:35px;
+    padding:35px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #fff
+        );
+
+    border:2px solid #ffd3e3;
+
+    border-radius:25px;
+
+    line-height:2;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 30px rgba(255,79,139,.10);
+}
+
+
+/*=========================================
+        SECRET MESSAGE — OPEN
+=========================================*/
+
+#secretMessage.secretShow{
+
+    display:block;
+
+    animation:
+        secretReveal
+        .8s ease forwards;
+}
+
+
+/*=========================================
+          REVEAL ANIMATION
+=========================================*/
+
+@keyframes secretReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.96);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        transform:
+            translateY(-5px)
+            scale(1.01);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/*=========================================
+          SECRET TITLE
+=========================================*/
+
+#secretMessage h2{
+
+    color:var(--primary);
+
+    font-size:1.8rem;
+
+    margin-bottom:22px;
+
+}
+
+
+/*=========================================
+        PROPOSAL TEXT
+=========================================*/
+
+#secretMessage strong{
+
+    display:inline-block;
+
+    font-size:1.5rem;
+
+    color:var(--primary);
+
+    margin:5px 0;
+
+}
+
+#secretMessage b{
+
+    color:#333;
+
+}
+
+
+/*=========================================
+          SECRET BUTTON
+=========================================*/
+
+#openSecret{
+
+    margin-top:28px;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f8b,
+            #ff84b8
+        );
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    box-shadow:
+        0 10px 25px rgba(255,79,139,.25);
+
+}
+
+
+/*=========================================
+          BUTTON HOVER
+=========================================*/
+
+#openSecret:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(255,79,139,.35);
+
+}
+
+
+/*=========================================
+          MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+    #secretEnvelope{
+
+        padding:90px 6%;
+
+    }
+
+    #secretEnvelope .secretCard{
+
+        padding:35px 22px;
+
+        border-radius:26px;
+
+    }
+
+    #secretEnvelope .secretCard > h2{
+
+        font-size:1.8rem;
+
+    }
+
+    #secretMessage{
+
+        padding:28px 20px;
+
+        font-size:.95rem;
+
+    }
+
+    #secretMessage h2{
+
+        font-size:1.5rem;
+
+    }
+
+    #secretMessage strong{
+
+        font-size:1.3rem;
+
+    }
+
+}
+/*=========================================
+      PREMIUM SECRET ENVELOPE 💌
+=========================================*/
+
+#secretEnvelope{
+    padding:120px 8%;
+    background:
+        radial-gradient(
+            circle at top,
+            #ffe4ef 0%,
+            #fff7fb 45%,
+            #fff 100%
+        );
+    position:relative;
+    overflow:hidden;
+}
+
+/* Soft background glow */
+
+#secretEnvelope::before{
+    content:"";
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    background:rgba(255,79,139,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+    left:-100px;
+
+    filter:blur(40px);
+}
+
+#secretEnvelope::after{
+    content:"";
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    background:rgba(255,184,210,.18);
+
+    border-radius:50%;
+
+    bottom:-100px;
+    right:-80px;
+
+    filter:blur(40px);
+}
+
+
+/* Main secret card */
+
+#secretEnvelope .sectionTitle{
+    position:relative;
+    z-index:2;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:55px 45px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    border-radius:32px;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 20px 55px rgba(255,79,139,.15);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    text-align:center;
+}
+
+
+/* Heading */
+
+#secretEnvelope .sectionTitle h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+/* Message */
+
+#secretEnvelope .sectionTitle > p{
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    color:#555;
+
+}
+
+
+/* Important words */
+
+#secretEnvelope b{
+
+    color:#ff4f8b;
+
+}
+
+
+/* Proposal name */
+
+#secretEnvelope h3{
+
+    margin:25px 0 15px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:#ff4f8b;
+
+}
+
+
+/* Open button */
+
+#openSecret{
+
+    margin-top:35px;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f8b,
+            #ff84b8
+        );
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,79,139,.25);
+
+    transition:.35s ease;
+
+}
+
+
+/* Button hover */
+
+#openSecret:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 32px
+        rgba(255,79,139,.35);
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    #secretEnvelope{
+
+        padding:90px 6%;
+
+    }
+
+    #secretEnvelope .sectionTitle{
+
+        padding:35px 22px;
+
+        border-radius:25px;
+
+    }
+
+    #secretEnvelope .sectionTitle h2{
+
+        font-size:2.4rem;
+
+    }
+
+    #secretEnvelope .sectionTitle > p{
+
+        font-size:.95rem;
+
+        line-height:1.9;
+
+    }
+
+    #secretEnvelope h3{
+
+        font-size:2.5rem;
+
+    }
+
+    #openSecret{
+
+        padding:14px 28px;
+
+    }
+
+}
+/*=========================================
+      🔒 FINAL MUSIC PLAYER LOCK
+=========================================*/
+
+#musicPlayer{
+    position:fixed !important;
+
+    top:12px !important;
+    right:12px !important;
+
+    left:auto !important;
+    bottom:auto !important;
+
+    width:auto !important;
+    height:auto !important;
+
+    margin:0 !important;
+
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+
+    padding:8px !important;
+
+    z-index:999999 !important;
+
+    transform:none !important;
+    animation:none !important;
+
+    transition:none !important;
+
+    /* image / card animations se isolate */
+    scale:1 !important;
+
+    touch-action:manipulation !important;
+}
+
+#musicPlayer:hover,
+#musicPlayer:active,
+#musicPlayer:focus,
+#musicPlayer:focus-within{
+    position:fixed !important;
+
+    top:12px !important;
+    right:12px !important;
+
+    transform:none !important;
+    scale:1 !important;
+
+    animation:none !important;
+
+    transition:none !important;
+}
+
+
+#musicToggle{
+    width:52px !important;
+    height:52px !important;
+
+    min-width:52px !important;
+    min-height:52px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    border-radius:50% !important;
+
+    transform:none !important;
+    scale:1 !important;
+
+    animation:none !important;
+
+    transition:none !important;
+}
+
+
+#musicToggle:hover,
+#musicToggle:active,
+#musicToggle:focus{
+    transform:none !important;
+    scale:1 !important;
+
+    animation:none !important;
+
+    transition:none !important;
+}
+
+
+@media(max-width:768px){
+
+    #musicPlayer{
+        top:10px !important;
+        right:10px !important;
+
+        left:auto !important;
+        bottom:auto !important;
+
+        padding:7px !important;
+
+        transform:none !important;
+        scale:1 !important;
+
+        animation:none !important;
+        transition:none !important;
+    }
+
+    #musicToggle{
+        width:50px !important;
+        height:50px !important;
+
+        min-width:50px !important;
+        min-height:50px !important;
+
+        transform:none !important;
+        scale:1 !important;
+
+        animation:none !important;
+        transition:none !important;
+    }
+
+    .musicInfo{
+        display:none !important;
+    }
+} 
+/* REMOVE UNWANTED MUSIC POPUP / BOX */
+
+#musicPlayer .musicInfo{
+    display:none !important;
+}
+
+#musicPlayer{
+    background:transparent !important;
+    box-shadow:none !important;
+    padding:0 !important;
+    width:auto !important;
+    max-width:none !important;
+}
+
+#musicToggle{
+    display:none !important;
+}
+/*=========================================
+      HIDE GIFT POPUP CLOSE BUTTON
+=========================================*/
+
+#closeGift{
+    display:none !important;
+}
+/*=========================================
+      MOBILE END-SCROLL STABILITY FIX
+=========================================*/
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+@media (max-width:768px){
+
+    html{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+        touch-action:pan-y;
+    }
+
+    body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+        overscroll-behavior-x:none;
+    }
+
+    #mainContent{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+    }
+
+}
